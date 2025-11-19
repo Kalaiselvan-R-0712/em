@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dashboard — Stackly Luxury Event Management</title>
-<meta name="description" content="Discover Stackly's story, values and team. Luxury event management crafted with passion and precision." />
+<title>Stackly — Luxury Event Management</title>
+<meta name="description" content="Stackly — Luxury event planning, corporate conferences, weddings & hybrid experiences." />
 <!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -19,136 +19,19 @@
   --text-dark: #111827;
   --muted: #6b7280;
 }
-
-/* Logo Box */
-.logo-box {
-  display: flex;
-  align-items: center;
-  min-height: 64px;
-  min-width: 0;
-}
-.logo-img-rect {
-  height: 54px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-  background: transparent;
-  padding: 2px 6px;
-  border-radius: 14px;
-  box-shadow: 0 1px 12px rgba(44,32,76,0.09);
-  transition: box-shadow .2s;
-}
-
-/* Header */
-header.site-header {
-  backdrop-filter: blur(8px);
-  background: rgba(255,255,255,0.88);
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-  transition: background 0.25s, border 0.2s;
-}
-
-/* Buttons & Inputs */
-.nav-btn {
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-.btn-ghost {
-  border: 1px solid rgba(0,0,0,0.10);
-  background: transparent;
-  color: #23262e;
-}
-.login-btn {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  background: transparent;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-weight: 600;
-}
-.register-btn {
-  background: linear-gradient(90deg, var(--gold-1), var(--gold-2));
-  color: #18181b;
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-weight: 700;
-  box-shadow: 0 6px 20px rgba(212,175,55,0.13);
-}
-
-/* Text colors */
-body, p, h1, h2, h3, h4, h5, h6, span, label, li, a, button {
-  color: #23262e !important;
-}
-.text-muted, .text-gray-400, .text-gray-300, .text-gray-500 {
-  color: #75787d !important;
-}
-a:hover, a[aria-current="page"] {
-  color: var(--accent) !important;
-}
-
-/* Body styling */
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--ivory);
-  color: var(--text-dark);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: background 0.2s, color 0.2s;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  header.site-header { padding-left: 11px; padding-right: 11px; }
-  .nav-links { display: none !important; }
-  #mobile-menu { display: none; }
-}
-@media (max-width: 640px) {
-  .logo-img-rect { height: 40px !important; }
-  .mobile-cta { display: inline-flex !important; }
-}
-
-/* Mobile menu styling */
-#mobile-menu {
+.card {
   background: white;
-  border-top: 1px solid #ddd;
-  padding: 10px 0;
-  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
 }
-#mobile-menu a {
-  display: block;
-  padding: 10px 0;
+.card:hover {
+  box-shadow: 0 18px 48px rgba(0,0,0,0.12);
 }
-
-/* Footer */
-footer {
-  color: #2d2f34 !important;
-  background: transparent !important;
-}
-footer a {
-  color: #3b3e45 !important;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-footer a:hover {
-  color: var(--accent) !important;
-}
-
-/* Hero */
-#hero .hero-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-@media (min-width: 1024px) {
-  #hero .hero-inner {
-    flex-direction: row;
-    text-align: left;
-    align-items: center;
-  }
+.gold-text {
+  color: var(--gold-1);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
 }
 
 /* Logo Box */
@@ -325,24 +208,45 @@ footer a:hover {
   }
 }
 
+    /* HERO */
+    .hero {
+      height: 70vh;
+      background: url("https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+        center/cover no-repeat;
+      width: 100%;
+    }
+
+    /* HERO CORP SECTION */
+    .hero-corp h1 {
+      font-family: "Playfair Display";
+      font-size: 2.7rem;
+      color: var(--gold);
+    }
+
+    .hero-corp p {
+      color: #333;
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
 </style>
 </head>
-
 <body>
+
 <!-- HEADER -->
 <header class="site-header fixed top-0 left-0 w-full z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-    <a href="index.html" class="logo-box">
+    <a href="homepage2.html" class="logo-box">
       <img src="assets/images/logo/stackly_logo.webp" alt="Stackly logo" class="logo-img-rect" />
     </a>
     <!-- NAV LINKS -->
     <nav class="items-center gap-6 hidden lg:flex nav-links">
-      <a href="index.html" class="text-gray-700 hover:text-[var(--accent)]" aria-current="false">Home</a>
-      <a href="about.html" class="text-gray-700 hover:text-[var(--accent)]">About</a>
-      <a href="services.html" class="text-gray-700 hover:text-[var(--accent)]">Services</a>
-      <a href="packages.html" class="text-gray-700 hover:text-[var(--accent)]">Packages</a>
-      <a href="contact.html" class="text-gray-700 hover:text-[var(--accent)]">Contact</a>
-      <a href="dashboard.html" class="text-gray-700 hover:text-[var(--accent)]" aria-current="page">Dashboard</a>
+      <a href="homepage2.html" class="text-gray-700 hover:text-[var(--accent)]" aria-current="false">Home</a>
+      <a href="about2.html" class="text-gray-700 hover:text-[var(--accent)]">About</a>
+      <a href="services2.html" class="text-gray-700 hover:text-[var(--accent)]">Services</a>
+      <a href="packages2.html" class="text-gray-700 hover:text-[var(--accent)]">Packages</a>
+      <a href="contact2.html" class="text-gray-700 hover:text-[var(--accent)]" aria-current="page">Contact</a>
+      <a href="dashboard.html" class="text-gray-700 hover:text-[var(--accent)]">Dashboard</a>
       <a href="login.html" class="login-btn ml-2 hover:shadow-md">Login</a>
       <a href="register.html" class="register-btn ml-3">Register</a>
     </nav>
@@ -352,81 +256,76 @@ footer a:hover {
     </div>
   </div>
   <div id="mobile-menu" class="hidden lg:hidden flex flex-col items-center space-y-3 text-sm px-6 py-4 text-center">
-    <a href="index.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto" aria-current="false">Home</a>
-    <a href="about.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">About</a>
-    <a href="services.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Services</a>
-    <a href="packages.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Packages</a>
-    <a href="contact.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Contact</a>
-    <a href="dashboard.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto" aria-current="page">Dashboard</a>
+    <a href="homepage2.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto" aria-current="false">Home</a>
+    <a href="about2.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">About</a>
+    <a href="services2.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Services</a>
+    <a href="packages2.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Packages</a>
+    <a href="contact2.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto" aria-current="page">Contact</a>
+    <a href="dashboard.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Dashboard</a>
     <a href="login.html" class="block w-full max-w-xs mt-2 py-2 border rounded-full text-center login-btn mx-auto">Login</a>
     <a href="register.html" class="block w-full max-w-xs py-2 rounded-full text-center register-btn mx-auto">Register</a>
   </div>
 </header>
 
-<!-- Hero Section with Image -->
-<section class="relative w-full h-96 overflow-hidden rounded-xl shadow-lg mb-12">
-  <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=800&q=80" alt="Contact luxury event management" class="w-full h-full object-cover brightness-75" />
-  <div class="absolute inset-0 flex items-center justify-center">
-    <!-- Removed text for cleaner hero -->
-  </div>
+  <!-- SPACING FIX -->
+  <div class="h-20"></div>
+
+  <!-- HERO -->
+  <section class="hero"></section>
+
+  <!-- HERO CORP BELOW HERO -->
+  <section class="hero-corp text-center px-6 py-10">
+    <h1>Get in touch with Stackly</h1>
+    <p class="mt-3">
+      Whether you're planning an intimate celebration or a large-scale experience, our team is ready to help. <br> Share your vision and we'll craft an exceptional plan.
+    </p>
+  </section>
+
+<!-- MAP -->
+<section class="w-full bg-gray-200 rounded-none">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.197492952376!2d80.21013317472994!3d13.050488213748304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266c69a99797f%3A0xf1295e59f1d6e1c0!2sChennai%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1705951423451!5m2!1sen!2sin" 
+    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
 </section>
 
-  <!-- MAIN CONTENT -->
-  <main class="px-5 max-w-7xl mx-auto pb-20">
-    <h1 class="heading-font text-3xl md:text-4xl font-bold mb-4">Dashboard Overview</h1>
-    <p class="text-gray-600 mb-10">Insights, analytics, and real-time event performance.</p>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-      <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 text-center">
-        <p class="text-gray-500 text-sm">Total Bookings</p>
-        <h3 class="text-3xl font-bold mt-2">126</h3>
-        <p class="text-green-500 text-sm mt-1">+12% this month</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 text-center">
-        <p class="text-gray-500 text-sm">Completed Events</p>
-        <h3 class="text-3xl font-bold mt-2">89</h3>
-        <p class="text-blue-500 text-sm mt-1">4 pending</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 text-center">
-        <p class="text-gray-500 text-sm">Payments Received</p>
-        <h3 class="text-3xl font-bold mt-2">₹4,85,200</h3>
-        <p class="text-green-500 text-sm mt-1">+18% growth</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 text-center">
-        <p class="text-gray-500 text-sm">Customer Ratings</p>
-        <h3 class="text-3xl font-bold mt-2">4.8 ★</h3>
-        <p class="text-yellow-500 text-sm mt-1">Top Rated</p>
-      </div>
+<!-- CONTACT — refreshed luxury form -->
+<section id="contact" class="py-24 bg-gradient-to-b from-transparent to-black/10">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+    <div>
+      <h3 class="text-4xl font-bold gold-text mb-4">Let's Start Your Luxury Event</h3>
+      <p class="text-gray-600 max-w-md">
+        Share your vision and we'll craft a personalized, flawless experience that reflects your style and ambition.
+      </p>
+      <ul class="mt-6 text-gray-500 space-y-3 text-sm font-light">
+        <li>📞 +91 98765 43210</li>
+        <li>📧 hello@stackly.com</li>
+        <li>📍 22 Event Street, Chennai, Tamil Nadu, India</li>
+      </ul>
     </div>
-
-    <div class="grid md:grid-cols-2 gap-10">
-      <div class="bg-white p-6 rounded-2xl shadow-md chart-container">
-        <h3 class="text-xl font-semibold mb-4">Monthly Booking Growth</h3>
-        <canvas id="bookingChart" class="w-full"></canvas>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md chart-container">
-        <h3 class="text-xl font-semibold mb-4">Revenue Report</h3>
-        <canvas id="revenueChart" class="w-full"></canvas>
-      </div>
+    <div>
+      <form id="contactForm" onsubmit="handleContact(event)" class="bg-white p-8 rounded-2xl shadow-lg space-y-6">
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Name</label>
+          <input type="text" name="name" required placeholder="Your full name" class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Email</label>
+          <input type="email" name="email" required placeholder="you@example.com" class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Phone</label>
+          <input type="tel" name="phone" required placeholder="+91 98765 43210" class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+        </div>
+        <div>
+          <label class="block mb-1 font-semibold text-gray-700">Message</label>
+          <textarea name="message" rows="4" placeholder="Tell us more about your event" class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold rounded-full py-3 shadow-lg hover:scale-105 transition-transform">Send Request</button>
+      </form>
     </div>
-
-    <div class="grid md:grid-cols-2 gap-10 mt-14">
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-4">Current Status</h3>
-        <ul class="space-y-3 text-gray-700">
-          <li>✔ 3 Events happening today</li>
-          <li>✔ 12 Events this week</li>
-          <li>✔ All teams are active</li>
-          <li>✔ No delays or issues</li>
-        </ul>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-4">Performance Report</h3>
-        <p class="text-gray-600">Excellent ongoing performance and sustained growth over the past months.</p>
-        <p class="text-green-600 font-semibold mt-3">You are performing better than 92% of competitors.</p>
-      </div>
-    </div>
-  </main>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer class="bg-[#060507] dark:bg-[#050406] text-gray-300 pt-10 pb-8">
@@ -440,11 +339,11 @@ footer a:hover {
     <div>
       <h4 class="font-semibold text-white mb-2">Quick Links</h4>
       <ul class="space-y-2 text-sm text-gray-300">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="homepage2.html">Home</a></li>
+        <li><a href="about2.html">About</a></li>
+        <li><a href="services2.html">Services</a></li>
+        <li><a href="packages2.html">Packages</a></li>
+        <li><a href="contact2.html">Contact</a></li>
       </ul>
     </div>
     <div>
@@ -492,17 +391,39 @@ footer a:hover {
 </footer>
 
 <script>
+function handleContact(event) {
+  event.preventDefault();
+  alert('Thank you for your request! We will get back to you shortly.');
+  // Custom form submission logic can be added here
+}
+
+// Dropdown toggle
+const homeDropdownBtn = document.getElementById('home-dropdown-button');
+const homeDropdownMenu = document.getElementById('home-dropdown-menu');
+const mobileHomeDropdownBtn = document.getElementById('mobile-home-dropdown-btn');
+const mobileHomeDropdownMenu = document.getElementById('mobile-home-dropdown-menu');
+
+homeDropdownBtn.addEventListener('click', e => {
+  e.preventDefault();
+  homeDropdownMenu.classList.toggle('hidden');
+  homeDropdownBtn.setAttribute('aria-expanded', homeDropdownMenu.classList.contains('hidden') ? 'false' : 'true');
+});
+
+mobileHomeDropdownBtn.addEventListener('click', () => {
+  mobileHomeDropdownMenu.classList.toggle('hidden');
+  mobileHomeDropdownBtn.setAttribute('aria-expanded', mobileHomeDropdownMenu.classList.contains('hidden') ? 'false' : 'true');
+  mobileHomeDropdownBtn.querySelector('svg').classList.toggle('rotate-180');
+});
+</script>
+
+<!-- Mobile menu toggle -->
+<script>
 const mobileToggle = document.getElementById('mobile-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
-
 mobileToggle.addEventListener('click', () => {
   const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
   mobileToggle.setAttribute('aria-expanded', String(!expanded));
-  if (expanded) {
-    mobileMenu.classList.add('hidden');
-  } else {
-    mobileMenu.classList.remove('hidden');
-  }
+  mobileMenu.classList.toggle('hidden');
 });
 </script>
 
@@ -589,59 +510,6 @@ mobileHomeDropdownBtn.addEventListener('click', () => {
   mobileHomeDropdownBtn.querySelector('svg').classList.toggle('rotate-180');
 });
 </script>
-<script>
-function validateAndRedirect(event) {
-  event.preventDefault();
-  const form = event.target;
-  if (form.name.value && form.email.value && form.message.value) {
-    // If validation passes, redirect to 404.html
-    window.location.href = '404.html';
-    return false;
-  } else {
-    alert('Please fill in all required fields.');
-    return false;
-  }
-}
-</script>
-  <script>
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
 
-    mobileToggle.addEventListener('click', () => {
-      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-      mobileToggle.setAttribute('aria-expanded', String(!expanded));
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    new Chart(document.getElementById("bookingChart"), {
-      type: "line",
-      data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-        datasets: [{
-          label: "Bookings",
-          data: [15, 22, 35, 40, 48, 59],
-          borderColor: "#d4af37",
-          borderWidth: 3,
-          fill: false,
-          tension: 0.3
-        }]
-      }
-    });
-
-    new Chart(document.getElementById("revenueChart"), {
-      type: "bar",
-      data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-        datasets: [{
-          label: "Revenue",
-          data: [45000, 52000, 62000, 70000, 88000, 96000],
-          backgroundColor: "#d4af37"
-        }]
-      }
-    });
-  </script>
 </body>
 </html>

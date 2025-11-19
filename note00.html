@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Dashboard — Stackly Luxury Event Management</title>
+<title>About Us — Stackly Luxury Event Management</title>
 <meta name="description" content="Discover Stackly's story, values and team. Luxury event management crafted with passion and precision." />
 <!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -325,6 +325,24 @@ footer a:hover {
   }
 }
 
+@media (max-width: 640px) {
+  .logo-img-rect {
+    height: 48px !important; /* slightly bigger for visibility */
+    margin-left: 1rem; /* spacing from left edge */
+  }
+
+  header.site-header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* to push hamburger right */
+  }
+
+  /* Hamburger button container (on mobile) */
+  #mobile-toggle {
+    position: relative;
+    top: 0;
+  }
+}
 </style>
 </head>
 
@@ -336,15 +354,21 @@ footer a:hover {
       <img src="assets/images/logo/stackly_logo.webp" alt="Stackly logo" class="logo-img-rect" />
     </a>
     <!-- NAV LINKS -->
-    <nav class="items-center gap-6 hidden lg:flex nav-links">
-      <a href="index.html" class="text-gray-700 hover:text-[var(--accent)]" aria-current="false">Home</a>
+    <nav class="items-center gap-14 hidden lg:flex nav-links">
+  <div class="ml-auto flex items-center gap-2"></div>
+
+      <a href="index.html" class="text-gray-700 hover:text-[var(--accent)]">Home</a>
       <a href="about.html" class="text-gray-700 hover:text-[var(--accent)]">About</a>
       <a href="services.html" class="text-gray-700 hover:text-[var(--accent)]">Services</a>
       <a href="packages.html" class="text-gray-700 hover:text-[var(--accent)]">Packages</a>
       <a href="contact.html" class="text-gray-700 hover:text-[var(--accent)]">Contact</a>
-      <a href="dashboard.html" class="text-gray-700 hover:text-[var(--accent)]" aria-current="page">Dashboard</a>
-      <a href="login.html" class="login-btn ml-2 hover:shadow-md">Login</a>
-      <a href="register.html" class="register-btn ml-3">Register</a>
+      <a href="dashboard.html" class="text-gray-700 hover:text-[var(--accent)]">Dashboard</a>
+    <!-- Login/Register group pushed to far right -->
+    <div class="ml-auto flex items-center gap-4">
+      <a href="login.html" class="login-btn hover:shadow-md">Login</a>
+      <a href="register.html" class="register-btn">Register</a>
+    </div>
+</div>  
     </nav>
     <div class="flex items-center gap-3">
       <!-- Hamburger button -->
@@ -353,80 +377,82 @@ footer a:hover {
   </div>
   <div id="mobile-menu" class="hidden lg:hidden flex flex-col items-center space-y-3 text-sm px-6 py-4 text-center">
     <a href="index.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto" aria-current="false">Home</a>
-    <a href="about.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">About</a>
+    <a href="about.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto" aria-current="page">About</a>
     <a href="services.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Services</a>
     <a href="packages.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Packages</a>
     <a href="contact.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Contact</a>
-    <a href="dashboard.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto" aria-current="page">Dashboard</a>
+    <a href="dashboard.html" class="block w-full max-w-xs px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-black mx-auto">Dashboard</a>
     <a href="login.html" class="block w-full max-w-xs mt-2 py-2 border rounded-full text-center login-btn mx-auto">Login</a>
     <a href="register.html" class="block w-full max-w-xs py-2 rounded-full text-center register-btn mx-auto">Register</a>
   </div>
 </header>
 
-<!-- Hero Section with Image -->
+<!-- Hero Section with Image and Overlay Title -->
 <section class="relative w-full h-96 overflow-hidden rounded-xl shadow-lg mb-12">
-  <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=800&q=80" alt="Contact luxury event management" class="w-full h-full object-cover brightness-75" />
-  <div class="absolute inset-0 flex items-center justify-center">
-    <!-- Removed text for cleaner hero -->
-  </div>
+  <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=2f8b6f3a" alt="Luxury event background" class="w-full h-full object-cover brightness-75" />
+
 </section>
 
-  <!-- MAIN CONTENT -->
-  <main class="px-5 max-w-7xl mx-auto pb-20">
-    <h1 class="heading-font text-3xl md:text-4xl font-bold mb-4">Dashboard Overview</h1>
-    <p class="text-gray-600 mb-10">Insights, analytics, and real-time event performance.</p>
+<!-- MAIN CONTENT -->
+<section class="max-w-6xl mx-auto px-6 py-12">
+  <h2 class="text-4xl font-extrabold text-gray-900 mb-6">About Stackly</h2>
+  <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+    Stackly is a premier luxury event management studio dedicated to crafting unforgettable experiences. 
+    From high-profile corporate conferences and grand product launches to intimate weddings and hybrid gatherings, 
+    we blend precision, passion, and creativity to produce flawless events that make lasting impressions.
+  </p>
+  <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+    Our approach centers around intentional design, elevated guest journeys, and unparalleled attention to detail. 
+    We believe true luxury lies in bespoke customization—from curated interiors and venue styling to innovative technology integration. 
+    Every event is tailored to reflect your vision with sophistication and style.
+  </p>
+  <p class="text-lg text-gray-700 mb-12 leading-relaxed">
+    Whether you’re seeking a seamless large-scale production or an elegant boutique celebration, 
+    Stackly brings world-class expertise and a dedicated team to ensure your event is truly extraordinary.
+  </p>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-      <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 text-center">
-        <p class="text-gray-500 text-sm">Total Bookings</p>
-        <h3 class="text-3xl font-bold mt-2">126</h3>
-        <p class="text-green-500 text-sm mt-1">+12% this month</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 text-center">
-        <p class="text-gray-500 text-sm">Completed Events</p>
-        <h3 class="text-3xl font-bold mt-2">89</h3>
-        <p class="text-blue-500 text-sm mt-1">4 pending</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 text-center">
-        <p class="text-gray-500 text-sm">Payments Received</p>
-        <h3 class="text-3xl font-bold mt-2">₹4,85,200</h3>
-        <p class="text-green-500 text-sm mt-1">+18% growth</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md border-t-4 border-yellow-500 text-center">
-        <p class="text-gray-500 text-sm">Customer Ratings</p>
-        <h3 class="text-3xl font-bold mt-2">4.8 ★</h3>
-        <p class="text-yellow-500 text-sm mt-1">Top Rated</p>
-      </div>
+  <h3 class="text-3xl font-semibold text-gray-900 mb-6">Our Core Values</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+      <h4 class="text-xl font-semibold text-yellow-600 mb-2">Bespoke Design</h4>
+      <p class="text-gray-600">Every detail crafted specifically for your unique vision and brand identity.</p>
     </div>
+    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+      <h4 class="text-xl font-semibold text-yellow-600 mb-2">Flawless Execution</h4>
+      <p class="text-gray-600">Meticulous planning and onsite coordination to ensure a seamless experience.</p>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+      <h4 class="text-xl font-semibold text-yellow-600 mb-2">Innovative Experiences</h4>
+      <p class="text-gray-600">State-of-the-art technology and creative concepts to wow your guests.</p>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+      <h4 class="text-xl font-semibold text-yellow-600 mb-2">Exceptional Service</h4>
+      <p class="text-gray-600">Dedicated, personalized support from concept through completion.</p>
+    </div>
+  </div>
 
-    <div class="grid md:grid-cols-2 gap-10">
-      <div class="bg-white p-6 rounded-2xl shadow-md chart-container">
-        <h3 class="text-xl font-semibold mb-4">Monthly Booking Growth</h3>
-        <canvas id="bookingChart" class="w-full"></canvas>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md chart-container">
-        <h3 class="text-xl font-semibold mb-4">Revenue Report</h3>
-        <canvas id="revenueChart" class="w-full"></canvas>
-      </div>
+  <h3 class="text-3xl font-semibold text-gray-900 mb-6">Meet Our Leadership Team</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-12">
+    <div class="text-center">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" alt="Jane Smith" class="mx-auto rounded-full w-32 h-32 object-cover mb-4 shadow-lg" />
+      <h4 class="text-xl font-bold text-gray-900">Jane Smith</h4>
+      <p class="text-yellow-600 font-semibold mb-1">Founder & Lead Planner</p>
+      <p class="text-gray-600 max-w-xs mx-auto">Passionate about designing immersive events that tell memorable stories.</p>
     </div>
-
-    <div class="grid md:grid-cols-2 gap-10 mt-14">
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-4">Current Status</h3>
-        <ul class="space-y-3 text-gray-700">
-          <li>✔ 3 Events happening today</li>
-          <li>✔ 12 Events this week</li>
-          <li>✔ All teams are active</li>
-          <li>✔ No delays or issues</li>
-        </ul>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-4">Performance Report</h3>
-        <p class="text-gray-600">Excellent ongoing performance and sustained growth over the past months.</p>
-        <p class="text-green-600 font-semibold mt-3">You are performing better than 92% of competitors.</p>
-      </div>
+    <div class="text-center">
+      <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80" alt="John Doe" class="mx-auto rounded-full w-32 h-32 object-cover mb-4 shadow-lg" />
+      <h4 class="text-xl font-bold text-gray-900">John Doe</h4>
+      <p class="text-yellow-600 font-semibold mb-1">Creative Director</p>
+      <p class="text-gray-600 max-w-xs mx-auto">Master of visual aesthetics and innovative event concepts.</p>
     </div>
-  </main>
+    <div class="text-center">
+      <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=800&q=80" alt="Emma Wilson" class="mx-auto rounded-full w-32 h-32 object-cover mb-4 shadow-lg" />
+      <h4 class="text-xl font-bold text-gray-900">Emma Wilson</h4>
+      <p class="text-yellow-600 font-semibold mb-1">Event Coordinator</p>
+      <p class="text-gray-600 max-w-xs mx-auto">Ensuring flawless operations and unmatched guest experiences.</p>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer class="bg-[#060507] dark:bg-[#050406] text-gray-300 pt-10 pb-8">
@@ -589,59 +615,5 @@ mobileHomeDropdownBtn.addEventListener('click', () => {
   mobileHomeDropdownBtn.querySelector('svg').classList.toggle('rotate-180');
 });
 </script>
-<script>
-function validateAndRedirect(event) {
-  event.preventDefault();
-  const form = event.target;
-  if (form.name.value && form.email.value && form.message.value) {
-    // If validation passes, redirect to 404.html
-    window.location.href = '404.html';
-    return false;
-  } else {
-    alert('Please fill in all required fields.');
-    return false;
-  }
-}
-</script>
-  <script>
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileToggle.addEventListener('click', () => {
-      const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-      mobileToggle.setAttribute('aria-expanded', String(!expanded));
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    new Chart(document.getElementById("bookingChart"), {
-      type: "line",
-      data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-        datasets: [{
-          label: "Bookings",
-          data: [15, 22, 35, 40, 48, 59],
-          borderColor: "#d4af37",
-          borderWidth: 3,
-          fill: false,
-          tension: 0.3
-        }]
-      }
-    });
-
-    new Chart(document.getElementById("revenueChart"), {
-      type: "bar",
-      data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-        datasets: [{
-          label: "Revenue",
-          data: [45000, 52000, 62000, 70000, 88000, 96000],
-          backgroundColor: "#d4af37"
-        }]
-      }
-    });
-  </script>
 </body>
 </html>
